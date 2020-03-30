@@ -1,0 +1,172 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{escexam}
+
+%\excludecomment{solution}
+
+%\renewcommand*\ttdefault{cmvtt}
+
+\begin{document}
+
+\vspace*{14ex}
+
+\makeheader{1}                              					% examination number (used to set theorem, lemma numbers)
+           {March 15, 2020}      					         		% examination date or deadline
+					 {40}											% total marks
+					 {Homework Assignment 3}							% Minor Quiz 1, Major Quiz 2, End sem, etc
+					
+\begin{tabular}{cl}
+1. & This question paper contains a total of 14 pages (14 sides of paper). Please verify.\\
+2. & Write your name, roll number, department on \textbf{every side of every sheet} of this booklet\\
+%3. & Write final answers \textbf{neatly with a pen} in the given boxes.\\
+%4. & Do not give derivations/elaborate steps unless the question specifically asks you to provide these.
+\end{tabular}
+
+
+\begin{problem} {\textbf{Model-checker as a motion planner}} (20 points)
+
+%In this assignment, we will use a model checker as a motion planner.
+\bigskip
+Consider a 2D workspace which
+is divided into small rectangular blocks using a grid. The size of the workspace is $5 \times 5$. The lower left grid block has the ID $(0,0)$, and 
+the upper right grid block has the ID $(4,4)$. The blocks $(2,0)$, $(3,0)$, $(1,2)$, $(3,2)$, $(1,4)$, and $(2,4)$ are covered with obstacles.
+We have two robots whose initial locations are $(0,0)$ and $(4,4)$, respectively. 
+The robots have four motion primitives: L, R, U, D that can take the robot from its current block location to the left, right, upper and lower block respectively.  
+The robots have to move to the blocks $(4,4)$ and $(0,0)$, respectively. Moreover, The second robot should reach its destination $(0,0)$ strictly after the first robot  reaches its destination.
+Capture the behavior of the robots as a transition system and the requirement stated above as an LTL formula. 
+Then through model checking, synthesize a trajectory for the robots. Use NuSMV model checker.
+
+\medskip
+\noindent
+Submit the following:
+\begin{itemize}
+\item NuSMV model and specification.
+\item A snapshot of the terminal showing the execution of the model-checker.
+\item Provide a visual representation of the trajectories synthesized by NuSMV.
+\end{itemize}
+
+\medskip
+\noindent
+NuSMV Wbdpage:
+\url{http://nusmv.fbk.eu}
+
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\end{problem}
+
+
+
+\newpage
+\begin{problem} {\textbf{Reactive motion planning}} (20 points)
+
+%In this assignment, we will learn how to synthesize a reactive motion plan for a robot.
+\bigskip
+Consider an office with 7 rooms for work and one kitchen room. A robot has been entrusted with 
+the responsibility of collecting used coffee mugs from the rooms and bring them to the kitchen.
+The robot can carry only one cup at a time. It keeps on visiting the rooms and if there is an empty cup in a room,
+it brings it to the kitchen. If it does not find a cup, it visits another room.
+
+Capture the requirements stated above in the form of an LTL formula. 
+Construct the layout of the office space based on the layout shown in Figure 2 in [KFP09],
+where region 1 is the kitchen and region 2-8 are the office rooms.
+Then with the help of LTLMoP tool, synthesize a reactive controller for the robot and simulate its behavior.
+
+[KFP09] H. Kress-Gazit, G. E. Fainekos, and G. J. Pappas. Temporal-logic-based reactive mission and motion planning. IEEE Transactions on Robotics, 25(6):1370-1381, 2009. 
+
+\bigskip
+\noindent
+Submit the following:
+\begin{itemize}
+\item Specification using LTL symbols.
+\item Specification in LTLMoP syntax.
+\item Synthesized Controller.
+\item Snapshot of the trajectories.
+\end{itemize}
+
+\bigskip
+\noindent
+LTLMoP Webpage:
+\url{https://ltlmop.github.io}
+
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\newpage
+\ \\
+\begin{minipage}{1\textwidth}
+		\rectangle{\linewidth}{24cm}
+		% \ruledrectangle{7}
+\end{minipage}
+\end{problem}
+
+
+% %\toptitlebar
+% \begin{center}
+% 	BLANK SPACE: Any answers written here will be left ungraded.\\ No exceptions.\\ You may use this space for rough work.
+% \end{center}
+% \begin{figure}[h!]
+% \includegraphics[width=\columnwidth]{watermark.png}%
+% \end{figure}
+
+\end{document}
