@@ -30,4 +30,4 @@ MODULE main
     robot1 : process robot(0);
     robot2 : process robot(24); 
   LTLSPEC G ! (robot1.node=robot2.node)
-  LTLSPEC (!(robot2.node = 0) U robot1.node = 24 ) & F (robot2.node = 0)
+  LTLSPEC !((!(robot2.node = 0) U robot1.node = 24 ) & F (robot2.node = 0))
