@@ -27,7 +27,6 @@ MODULE robot(init_robo)
                   esac;      
 MODULE main
   VAR 
-    robot1 : process robot(0);
-    robot2 : process robot(24); 
-  LTLSPEC G ! (robot1.node=robot2.node)
-  LTLSPEC !((!(robot2.node = 0) U robot1.node = 24 ) & F (robot2.node = 0))
+    robot1 : robot(0);
+    robot2 : robot(24); 
+    LTLSPEC ! G ( !(robot1.node = robot2.node) & F (robot2.node = 0) & ((!(robot2.node = 0)) U robot1.node = 24) )
