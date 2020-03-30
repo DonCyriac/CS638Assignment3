@@ -24,9 +24,9 @@ MODULE robot(init_robo)
                     node = 23 : {18,24};
                     node = 24 : {23,19};
                     TRUE : node;
-                  esac;      
+                  esac;     
 MODULE main
   VAR 
     robot1 : robot(0);
     robot2 : robot(24); 
-    LTLSPEC ! G ( !(robot1.node = robot2.node) & F (robot2.node = 0) & ((!(robot2.node = 0)) U robot1.node = 24) )
+  LTLSPEC ! G ( !(robot1.node = robot2.node) & F (robot2.node = 0) & ((!(robot2.node = 0)) U robot1.node = 24))
