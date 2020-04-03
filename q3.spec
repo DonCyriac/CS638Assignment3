@@ -33,19 +33,19 @@ empty_cup, 1
 ======== SPECIFICATION ========
 
 RegionMapping: # Mapping between region names and their decomposed counterparts
-r4 = p6
-r5 = p5
-r6 = p4
-r7 = p3
-r1 = p9
-r2 = p8
-r3 = p7
-others = p1
-hall4 = p10
-Kitchen = p14
-hall2 = p15, p16
-hall3 = p11
-hall1 = p13
+r4 = p7
+r5 = p6, p27, p28
+r6 = p13, p20, p21, p22
+r7 = p4
+r1 = p10
+r2 = p9
+r3 = p8
+others = p2, p18, p19
+hall4 = p11
+Kitchen = p17
+hall2 = p15
+hall3 = p13, p23, p24, p25, p26, p27, p28
+hall1 = p29, p30
 
 Spec: # Specification in structured English
 # Initial conditions
@@ -54,14 +54,17 @@ Robot starts in Kitchen with false
 
 # Assumptions about the environment
 If you are in Kitchen then do not empty_cup
-If you are in (hall1 or hall2 or hall3 or hall4) then do not empty_cup
+#If you are in (hall1 or hall2 or hall3 or hall4) then do not empty_cup
 # Define robot safety including how to pick up
+Group halls is hall1, hall2, hall3, hall4
 Do pick_up if and only if you are sensing empty_cup and you are not activating carrying_cup
+If you are in any halls then do not pick_up
 #If you are activating pick_up then stay there
 carrying_cup is set on pick_up and reset on drop
+
 Do drop if and only if you are in Kitchen and you are activating carrying_cup
 
-If you did not activate carrying_cup then always not Kitchen
+#If you did not activate carrying_cup then always not Kitchen
 If you are not activating carrying_cup then always not Kitchen
 
 
