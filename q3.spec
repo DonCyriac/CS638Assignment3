@@ -33,19 +33,19 @@ empty_cup, 1
 ======== SPECIFICATION ========
 
 RegionMapping: # Mapping between region names and their decomposed counterparts
-r4 = p7
-r5 = p6, p27, p28
-r6 = p13, p20, p21, p22
-r7 = p4
-r1 = p10
-r2 = p9
-r3 = p8
-others = p2, p18, p19
-hall4 = p11
-Kitchen = p17
-hall2 = p15
-hall3 = p13, p23, p24, p25, p26, p27, p28
-hall1 = p29, p30
+r4 = p5
+r5 = p4
+r6 = p3
+r7 = p2
+r1 = p8
+r2 = p7
+r3 = p6
+others = 
+hall4 = p14, p15
+Kitchen = p13
+hall2 = p11
+hall3 = p10
+hall1 = p12
 
 Spec: # Specification in structured English
 # Initial conditions
