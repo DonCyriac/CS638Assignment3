@@ -18,7 +18,7 @@ fastslow: False
 decompose: True
 
 CurrentConfigName:
-test
+Untitled configuration
 
 Customs: # List of custom propositions
 carrying_cup
@@ -53,7 +53,8 @@ Env starts with false
 Robot starts in r1 with false
 
 # Assumptions about the environment
-# If you were in r1 then do not empty_cup
+# If you were in r1 or r9 or r10 or r11 or r12 then do not empty_cup
+
 
 
 # Define robot pickup
@@ -63,7 +64,7 @@ Do drop if and only if you are in r1 and you are activating carrying_cup
 
 carrying_cup is set on pick_up and reset on drop
 
-If you did not activate carrying_cup then always not r1
+If you are not activating carrying_cup then always not r1
 
 
 # Patrol goals
