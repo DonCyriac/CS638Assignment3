@@ -1,10 +1,8 @@
 MODULE robot(init_robo)
   VAR
    node : 0..24;
-   step : 0..35;
   ASSIGN
     init(node) := init_robo;
-    init(step) := 0;
     next(node) := case
                     node = 0 : {5,1};
                     node = 1 : {6,0};
@@ -19,23 +17,17 @@ MODULE robot(init_robo)
                     node = 14 : {19,9};
                     node = 15 : {10,20,16};
                     node = 16 : {15,17};
-                    node = 17 : {18,16};
+                    node = 17 : {18,16,12};
                     node = 18 : {17,23,19};
-                    node = 19 : {24,14};
+                    node = 19 : {24,14,18};
                     node = 20 : 15;
                     node = 23 : {18,24};
                     node = 24 : {23,19};
                     TRUE : node;
                   esac;      
-   next(step) := case
-		step = 35 : step;
-		TRUE : step+1;
-		esac;
 MODULE main
   VAR 
     robot1 : robot(0);
     robot2 : robot(24); 
   ASSIGN
-    LTLSPEC ! G ((robot1.node != robot2.node) & F (robot2.node = 0) & ((!(robot2.node = 0)) U robot1.node = 24)) & !(robot1.step < 26 & robot2.step < 26)
-
-
+    LTLSPEC  !(G(robot1.node != robot2.node) &  (!(robot1.node = 24 | robot2.node = 0) U (robot1.node = 24 & !(robot2.node=0))) & F(robot1.node=24 & robot2.node=0))
