@@ -1,0 +1,7 @@
+configs/*
+*.sty
+q3.aut
+q3_decomposed.regions
+q3.ltl
+q3.smv
+
